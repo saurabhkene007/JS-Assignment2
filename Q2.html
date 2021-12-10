@@ -1,23 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array sum and product</title>
+    <title>sum and product of array</title>
 </head>
 <body>
+ Array  <p id="array"></p>
+   Sum of Array<p id="sum"></p>
+   Product of Array<p id="prod"></p>
     <script>
         var array= [10,20,30,40,50];
 var sum=0;
 var prod=1;
-for(var i=0; i<array.length; i++)
+var i=0; 
+while(i<array.length)
 {
     sum = sum+ array[i];
     prod = prod*array[i];
-}
-console.log("sum of the integer is :"+sum);
-console.log("Product of the integer is :"+prod);
+    i++}
+console.log("Sum of Array= :"+sum);
+console.log("Product of Array= :"+prod);
+document.getElementById("sum").innerHTML =sum;
+document.getElementById("prod").innerHTML =prod;
+document.getElementById("array").innerHTML =array;
 
     </script>
 </body>
