@@ -4,32 +4,23 @@
 <meta charset="utf-8">
 <title>Email Validation</title>    
 </head>
-<body onload='document.form1.text1.focus()'>
-<div class="mail">
-<h2>Enter validate Email</h2>
-<form name="form1" action="#"> 
-<input type='text' name='text1'/>
-<input type="submit" name="submit" value="Submit" onclick="ValidateEmail(document.form1.text1)"/></li>
-
-</form>
-</div>
+<body>
 <script>
-    function ValidateEmail(inputText)
+ function valid_email(emailid)
 {
-var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-if(inputText.value.match(mailformat))
-{
-alert("Valid email address!");
-document.form1.text1.focus();
-return true;
-}
-else
-{
-alert("You have entered an invalid email address!");
-document.form1.text1.focus();
-return false;
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
+if(emailid.match(mailformat))
+{  
+console.log("Valid email address....");  
+}  
+else  
+{  
+console.log("Invalid email address....");  
 }
 }
+valid_email("saurabh.kene@mastek.com");
+valid_email(".saurabh.95@gmail.com");
+valid_email("saurabh97kene@gmail.com");
 </script>
 </body>
 </html>
